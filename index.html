@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Palindrome Checker</title>
+  <link rel="stylesheet" href="./index.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Palindrome Checker</h1>
+        <input type="text" id="q1" placeholder="Enter Something">
+        <button onclick="checkPalindrome()">Check</button>
+        <p id="ans1"></p>
+
+        <div>
+            <h2>JavaScript Code</h2>
+            <pre>
+function checkPalindrome() {
+    let str = document.getElementById("q1").value;
+    let reversed = str.split("").reverse().join("");
+    if (str === reversed) {
+        document.getElementById("ans1").innerHTML = "it is a palindrome";
+    } else {
+        document.getElementById("ans1").innerHTML = "not a palindrome";
+    }   
+}
+            </pre>
+        </div>
+    </div>
+
+    <!-- Add the script directly here -->
+    <script>
+        function checkPalindrome() {
+            let str = document.getElementById("q1").value;
+            let reversed = str.split("").reverse().join("");
+            if (str === reversed) {
+                document.getElementById("ans1").innerHTML = "It is a palindrome";
+            } else {
+                document.getElementById("ans1").innerHTML = "Not a palindrome";
+            }   
+        }
+    </script>
+</body>
+</html>
